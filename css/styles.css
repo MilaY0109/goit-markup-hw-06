@@ -299,6 +299,15 @@ height: 40px;
   justify-content: center;
 }
 
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/people-office-mob-2x.jpg);
+  }
+
+}
+
 .hero .container {
   text-align: center;
   display: block;
@@ -600,6 +609,7 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   align-items: baseline;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .logo-text-box {
   /*margin-right: 120px;*/
@@ -634,9 +644,6 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 .footer-social-networks {
 margin-bottom: 72px;
-margin-left: 40px;
-margin-right: 40px;
-justify-content: center;
 }
 
 .footer-networks-text {
@@ -688,6 +695,7 @@ text-align: center;
   /*gap: 24px;*/
   flex-wrap: wrap;
   justify-content: center;
+  gap: 16px;
 }
 .footer-form-text {
   color: #FFF;
@@ -713,7 +721,6 @@ width: 288px;
 height: 40px;
 background: transparent;
 filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-margin-bottom: 16px;
 }
 
 .footer-form-input::placeholder {
@@ -1053,6 +1060,13 @@ text-decoration-line: underline;
     justify-content: center;
   }
 
+  @media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/people-office-tab-2x.jpg);
+  }
+}
   .hero-title {
     color: #ffffff;
     text-align: center;
@@ -1114,7 +1128,8 @@ text-decoration-line: underline;
     display: flex;
     align-items: baseline;
     flex-wrap: wrap;
-    margin-left: 92px;
+    max-width: 584px;
+    justify-content: flex-start;
   }
 
   .logo-text-box {
@@ -1186,26 +1201,99 @@ text-align: left;
 
 /*------ MEDIA 1158 ----*/
 
-/*@media screen and (min-width: 1158px) {
+@media screen and (min-width: 1158px) {
   .container {
     max-width: 1158px;
     padding-left: 15px;
     padding-right: 15px;
   }
 
-.hero {
-  background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/people-office.jpg);
+  
+
+
+
+
+
+      /* ---- HEADER ----- */
+
+ .header .container {
+  display: flex;
+  gap: 332px;
 }
-.features-item {
-    width: 100%;
-    width: 264px;
-    
+
+.header-navigation {
+  display: flex;
+  align-items: center;
+  gap: 76px;
+}
+
+.header-logo {
+
+}
+
+.header-list {
+  display: flex;
+  gap: 40px;
+  margin-left: 0;
+  
+}
+.header-address-list {
+  display: flex;
+  flex-direction: unset;
+  gap: 40px;
+  padding-top: 24px;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.hero {
+   padding: 188px 0;
+  background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/people-office.jpg);
+ max-width: 1440px;
+}
+
+/*@media (min-resolution: 192dpi) {
+  .hero {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/people-office-2x.jpg);
   }
+}*/
+  @media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/people-office-2x.jpg);
+  }
+}
+
+.hero-title {
+  font-size: 56px;
+  line-height: 1.07;
+  margin-bottom: 48px;
+  max-width: 496px;
+}
+
+
+.features {
+  padding: 120px 0;
+}
 
 .features-list {
   display: flex;
   gap: 24px;
 }
+
+.features-item {
+  width: 100%;
+  width: 264px;
+  
+}
+
+.features-icon-area {
+display: block;
+}
+
 
 .features-item-title {
   color: #2e2f42;
@@ -1220,7 +1308,78 @@ font-weight: 400;
 }
 
 
+.team {
+  padding: 120px 0;
+}
 
- }*/  
+.team-list {
+  gap: 24px;
+}
+
+.portfolio {
+  padding: 120px 0;
+}
+
+.portfolio-list {
+  row-gap: 48px;
+}
+
+.portfolio-list-item {
+  width: 360px;
+}
+
+
+.footer {
+  padding: 100px 0;
+}
+
+.footer .container {
+flex-wrap: nowrap;
+display: flex;
+max-width: 1158px;
+}
+ 
+
+.logo-text-box {
+  margin-right: 120px;
+}
+
+.footer-logo {
+  display: inline-block;
+}
+.footer-text {
+  max-width: 264px;
+}
+
+.footer-form-container {
+  margin-left: 80px;
+}
+
+.footer-form {
+  gap: 24px;
+}
+
+.footer-form-input {
+  width: 264px;
+}
+
+.modal-container {
+  width: 408px;
+      min-height: 584px;
+       padding: 72px 24px 24px 24px;
+}
+
+
+.form-close-btn {
+  margin-left: 360px;
+  margin-right: 24px;
+  margin-top: 0;
+}
+
+.modal-form-text {
+   max-width: 360px;
+   margin-top: 0;
+}
+ }  
 
  
